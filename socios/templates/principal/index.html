@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOLA HOLA</title>
+</head>
+<body>
+<h1>ORGANIZACIONES</h1>
+
+<table border="1">
+    <thead>
+        <th>Nombre</th>
+        <th>Tipo</th>
+      
+    </thead>
+    <tbody>
+        {% for org in organizaciones %}
+        <tr>
+            <td><a href="{% url 'detalle_org' org.nombre %}">{{ org.nombre }}</a></td>
+            <td>{{ org.tipo }}</td>
+            
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
+    
